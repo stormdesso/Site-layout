@@ -1,0 +1,430 @@
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);        
+}
+
+.wrapper_alt{
+    height: 48vw;
+    width: 100%;
+
+    background-color: #ddd;	
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);  
+
+	font-family: 'Open Sans';
+}
+
+/*Animation on slider*/
+#curr_city::after{
+    content: "";
+
+    animation: show-city;
+    animation-duration: 10s;
+    
+    animation-iteration-count: infinite;    
+}
+#from::after{
+    content: "";
+
+    animation: show-from;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;    
+}
+#curr_price::after{
+    content: "";
+
+    animation: show-price;
+    animation-duration: 9.99s;
+	animation-iteration-count: infinite;    
+}
+
+#learn_more::after{
+    content: "";
+    
+    color: #fff;
+    background: url("images/capt_a.png") 0 0 repeat-x #c5302c;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 12px 46px 13px;
+    box-shadow: 3px 3px 5px 3px #193c46;
+
+    cursor: pointer;
+    
+
+    animation: show-learn-more;
+    animation-duration: 10s;
+	animation-iteration-count: infinite; 
+}
+
+#learn_more:hover:after{
+	transition: 1s;	
+	background-color: #002141;
+	background-position: 0 -100px;
+}
+
+
+@keyframes show-city {
+    0%{
+		content: "Venice";
+	}
+
+	10%{
+		content: "London";
+	}
+
+	20%{
+		content: "London";
+	}
+
+	50%{
+		content: "Maldives";
+	}
+
+	100%{
+		content: "Venice";
+	}
+}
+
+@keyframes show-price {
+    0%{
+		content: "$1600";
+	}
+
+	10%{
+		content: "$1000";
+	}
+
+	20%{
+		content: "$1000";
+	}
+
+	50%{
+		content: "$2000";
+	}
+
+	100%{
+		content: "$1600";
+	}
+}
+
+
+/*static*/
+@keyframes show-from {
+    0%{
+		content: "from";
+	}
+
+	100%{
+		content: "from";
+	}
+}
+@keyframes show-learn-more {
+    0%{
+		content: "learn more";
+	}
+
+	100%{
+		content: "learn more";
+	}
+}
+
+/*Styles property for text on slider*/
+
+.card_city_on_slider{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+#img_on_slider{
+
+	margin-right: 0;
+    margin-bottom: auto;
+
+    width: 190px;
+    height: 57px;
+}
+
+.city_label{    	
+    font-size: 72px;
+    color: #f3aa29;
+    font-weight: lighter;  
+    font-family: 'Open Sans', sans-serif;
+	line-height: 0.85;
+}   
+
+.from_on_slider{
+	text-align: center;
+
+    font-size: 24px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.price_label{
+	text-align: center;
+
+    font-size: 48px;
+    line-height: 48px;
+    color: #fff;
+    line-height: 60px;
+}
+
+@media (max-width: 996px) {
+	.from_on_slider{
+		display: none;
+	}
+
+	.price_label{
+		display: none;
+	}
+	#img_on_slider{
+		margin-top: auto;
+	}
+	
+}
+
+.learn_more{
+    margin-top: 12px;
+}
+
+
+.learm_more_after_click{
+	color: #fff;
+    background: url("images/capt_a.png") 0 0 repeat-x #c5302c;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 12px 46px 13px;
+    box-shadow: 3px 3px 5px 3px #193c46;
+
+	
+    cursor: pointer;
+}
+
+.learm_more_after_click:hover{
+	background-color: #002141;
+	background-position: 0 -100px;
+}
+
+
+.card_city_on_slider .price_label{
+}
+
+
+
+
+/*Text on slide, when you dont't click on radio button*/
+#label1{
+    display: none;
+}
+
+#label2{
+    display: none;
+}
+
+#label3{
+    display: none;
+}
+
+
+/*Radio buttons*/
+#slide1:checked ~ .my_super_animation #label1,
+#slide2:checked ~ .my_super_animation #label2,
+#slide3:checked ~ .my_super_animation #label3 {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: auto;
+}
+
+@media (max-width: 994px) {
+	#slide1:checked ~ .my_super_animation #label1,
+	#slide2:checked ~ .my_super_animation #label2,
+	#slide3:checked ~ .my_super_animation #label3 {	
+		margin-top: 0;
+	}	
+}
+
+.card_after_click{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top:auto
+}
+
+.card_before_click{
+
+}
+
+
+.wrapper_alt input{
+	display: none;
+}
+
+.wrapper_alt .controls{
+    z-index: 100 ;
+    bottom: 0px;
+    
+    display: block;
+    align-self: center;
+    justify-self: flex-end;
+
+    margin-top: auto;
+    margin-bottom: 10px;
+
+}
+
+@media (max-width: 996px) {
+	.wrapper_alt .controls{
+		justify-self:normal;
+
+	}
+	.wrapper_alt label {		
+		margin: 5px 12px 0 12px;		
+	}
+}
+
+@media (max-width: 785px) {
+	.wrapper_alt .controls{
+		margin-bottom: 5px;
+	}
+}
+
+.wrapper_alt label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 15px 12px 0 12px;
+	position: relative;
+	width: 8px;	
+	border-radius: 50%;
+}
+
+.wrapper_alt label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper_alt label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3) {
+	background:  rgba(216, 53, 50, 0.404);/*Цвет выбранной кнопки*/
+}
+
+#slide1:checked ~ .my_super_animation .controls label:nth-of-type(1),
+#slide2:checked ~ .my_super_animation .controls label:nth-of-type(2),
+#slide3:checked ~ .my_super_animation .controls label:nth-of-type(3) {
+	background: rgb(216, 54, 50);/*Цвет выбранной кнопки*/
+}
+
+#slide1:checked ~ .my_super_animation{
+	background-image: url("images/slide.jpg");
+    animation: none;
+}
+#slide2:checked ~ .my_super_animation{
+	background-image: url("images/slide1.jpg");
+    animation: none;
+}
+#slide3:checked ~ .my_super_animation{
+	background-image: url("images/slide2.jpg");
+    animation: none;
+}
+
+#slide1:checked ~ .my_super_animation #curr_city::after,
+#slide1:checked ~ .my_super_animation #from::after,
+#slide1:checked ~ .my_super_animation #curr_price::after,
+#slide1:checked ~ .my_super_animation #learn_more::after{
+
+    animation: none;
+}
+
+#slide2:checked ~ .my_super_animation #curr_city::after,
+#slide2:checked ~ .my_super_animation #from::after,
+#slide2:checked ~ .my_super_animation #curr_price::after,
+#slide2:checked ~ .my_super_animation #learn_more::after{
+    animation: none;
+}
+
+#slide3:checked ~ .my_super_animation #curr_city::after,
+#slide3:checked ~ .my_super_animation #from::after,
+#slide3:checked ~ .my_super_animation #curr_price::after,
+#slide3:checked ~ .my_super_animation #learn_more::after{
+    animation: none;
+}
+#slide1:checked ~ .my_super_animation #learn_more::after,
+#slide2:checked ~ .my_super_animation #learn_more::after,
+#slide3:checked ~ .my_super_animation #learn_more::after{
+    padding: 0;
+}
+
+#space_division{
+	display: none;
+	height: 25px;
+	width: 100%;
+}
+
+#slide1:checked ~ .my_super_animation #space_division,
+#slide2:checked ~ .my_super_animation #space_division,
+#slide3:checked ~ .my_super_animation #space_division{
+	display: block;
+	color: transparent;
+}
+
+
+
+
+/*Animation*/
+.my_super_animation
+{	
+	width: 100%;
+	height: 100%;
+	background-size: cover;	
+
+	text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+	animation-name: slide-show;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slide-show{
+	0%{
+		background-image: url("images/slide2.jpg");
+	}
+
+	10%{
+		background-image: url("images/slide.jpg");
+	}
+
+	20%{
+		background-image: url("images/slide.jpg");
+	}
+
+	50%{
+		background-image: url("images/slide1.jpg");
+	}
+
+	100%{
+		background-image: url("images/slide2.jpg");
+	}
+	
+}
+

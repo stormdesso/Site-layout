@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles-alt.css">
+    <link rel="stylesheet" href="styles-footer.css">
+    <link rel="stylesheet" href="alt-slider-styles.css">
+
+</head>
+
+<body>  
+    <div class="menu_block_mobile">
+        <nav>
+            <ul>
+                <li id="top_point">
+                    <a href="#">...</a>
+                    <ul>
+                        <li id="first_point"><a href="#">ABOUT</a></li>
+                        <li><a href="#">HOT TOURS</a></li>
+                        <li><a href="#">SPECIAL OFFERS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li id="last_point"><a href="#">CONTACTS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="wrapper_alt">
+
+        <input type="radio" name="point" id="slide1">
+        <input type="radio" name="point" id="slide2">
+        <input type="radio" name="point" id="slide3">
+
+        <div class="my_super_animation">
+
+            <div class="card_after_click">                  
+                <div id="space_division">g</div>
+
+                <img src="images/logo.png" id="img_on_slider" alt="">
+
+                <!--Card with city when you click on radio button-->          
+                <div class="card_city_on_slider" id="label1">
+                    <div class="city_label">
+                        London
+                    </div>
+                    <div class="from_on_slider">
+                        from
+                    </div>
+                    <div class="price_label">
+                        $1000
+                    </div>
+
+                    <a href="" class="learm_more_after_click">learn more</a>
+                </div>
+
+                <div class="card_city_on_slider" id="label2">
+                    <div class="city_label">
+                        Maldives
+                    </div>
+                    <div class="from_on_slider">
+                        from
+                    </div>
+                    <div class="price_label">
+                        $2000
+                    </div>
+
+                    <a href="" class="learm_more_after_click">learn more</a>
+                </div>
+
+                <div class="card_city_on_slider" id="label3">
+                    <div class="city_label">
+                        Venice
+                    </div>
+                    <div class="from_on_slider">
+                        from
+                    </div>
+                    <div class="price_label">
+                        $1600
+                    </div>
+
+                    <a href="" class="learm_more_after_click">learn more</a>
+                </div>
+            </div>
+
+            <div class="card_before_click"></div>
+            <!--Card with city when you not click on radio button-->                          
+            <div id="curr_city" class="city_label"></div>
+            <div id="from" class="from_on_slider"></div>
+            <div id="curr_price" class="price_label"></div>
+            <div id="learn_more" class="learn_more"></div>
+            
+
+            <div class="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">       
+        <div class="menu_block">
+            <ul>
+                <li id="current"><a href="#">ABOUT</a></li>
+                <li><a href="#">HOT TOURS</a></li>
+                <li><a href="#">SPECIAL OFFERS</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li id="last_li"><a href="#">CONTACTS</a></li>
+            </ul>
+        </div>
+        
+        <div class="grid_card">
+
+            <div class="card1 text_in_card">
+                <div class="title">barcelona</div>
+                <div class="from">from</div>
+                <div class="price">$ 1000</div>
+                <button>learn more</button>
+            </div>
+
+            <div class="card2 text_in_card">
+                <div class="title">goa</div>
+                <div class="from">from</div>
+                <div class="price">$ 1.500</div>
+                <button>learn more</button>
+            </div>
+
+            <div class="card3 text_in_card">
+                <div class="title">paris</div>
+                <div class="from">from</div>
+                <div class="price">$ 1.600</div>
+                <button>learn more</button>
+            </div>
+
+        </div>
+
+        <div class="grid_for_booking">
+
+            <div class="booking_content">
+                <h3>BOOKING FORM </h3>
+                <div id="font_color_in_booking_form">
+                    <form id="bookingForm">
+
+                        <div class="grid_for_input">
+
+                            <div>
+                                <div class="controlHolder">
+                                    <div>
+                                        <input name="Name" placeholder="Name:" type="text"
+                                            data-constraints="@NotEmpty @Required @AlphaSpecial" class="media_width">
+                                    </div>
+                                </div>
+                                <div class="controlHolder">
+                                    <div>
+                                        <input name="Country" placeholder="Country:" type="text"
+                                            data-constraints="@NotEmpty @Required" class="media_width">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fl2">
+                                <div class="controlHolder">
+                                    <div class="tmInput">
+                                        <input name="Email" placeholder="Email:" type="text"
+                                            data-constraints="@NotEmpty @Required @Email" class="media_width">
+                                    </div>
+                                </div>
+                                <div class="controlHolder">
+                                    <div class="tmInput mr0">
+                                        <input name="Hotel" placeholder="Hotel:" type="text"
+                                            data-constraints="@NotEmpty @Required" class="media_width">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grid_for_date_input">
+                            <strong>Check-in</strong>
+                            <input type="text" name="Check-in" placeholder="10/05/2014"
+                                data-constraints="@NotEmpty @Required @Date" id="dp1681051804733" class="hasDatepicker">
+                        </div>
+
+                        <div class="grid_for_date_input">
+
+                            <strong>Check-out</strong>
+                            <input type="text" name="Check-out" placeholder="20/05/2014"
+                                data-constraints="@NotEmpty @Required @Date" id="dp1681051804734" class="hasDatepicker">
+                        </div>
+
+                        <p>Comfort</p>
+
+                        <div class="grid_for_comfort_input">
+                            <div>
+                                <input type="radio" name="comfort" id="cheap">
+                                <label for="cheap">Cheap</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="standart" name="comfort" value="standart" checked>
+                                <label for="standart">Standart</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="lux" name="comfort" value="lux" checked>
+                                <label for="lux">Lux</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="fl1">
+
+                            <div>
+                                <div class="label_and_select select_wrapper flex_wrapper">
+                                    <label for="adults_select">Adults</label>
+                                    <select name="adults" id="adults_select">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                    </select>
+                                </div>
+
+                                <div class="label_and_select select_wrapper flex_wrapper">
+                                    <label for="rooms_select">Rooms</label>
+                                    <select name="rooms" id="rooms_select">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="label_and_select select_wrapper" id="child">
+                                <label for="childrens_select">Children</label>
+                                <select name="childrens" id="childrens_select">
+                                    <option value="null">0</option>
+                                    <option value="one">1</option>
+                                    <option value="two">2</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="controlHolder">
+                            <div class="tmTextarea">
+                                <textarea name="Message" placeholder="Message"
+                                    data-constraints="@NotEmpty @Required @Length(min=20,max=999999)"
+                                    id="regula-generated-971889"></textarea>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn" data-type="submit">Submit</a>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="right_column_in_booking_grid">
+                <h3>WELCOME</h3>
+                <img id="kiss_img" src="images/kiss_img.jpg">
+                <p class="regular_text_on_page" id="paragraph0">Lorem ipsum dolor sit ere amet, consectetur ipiscin.</p>
+                <text class="regular_text_on_page">In mollis erat mattis neque facilisis, sit ametiol</text>
+                <p class="regular_text_on_page" id="paragraph">Proin pharetra luctus diam, a scelerisque eros convallis
+                </p>
+
+                <h4>CLIENTS’ QUOTES</h4>
+
+                <img src="images/woman.jpg" id="miranda_brown_img">
+                <div class="bq1">
+                    <div class="clients_quotes regular_text_on_page">
+                        Duis massa elit, auctor non pellentesque vel,
+                        aliquet sit amet erat. Nullam eget dignissim nisi,
+                        aliquam feugiat nibh.
+                    </div>
+
+                    <div id="miranda_brown_label">
+                        <div>MIRANDA BROWN</div>
+                        <a id="more_btn" href="#">More</a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <h3 id="h3_latest_news">latest news</h3>
+
+        <div class="news_block">
+
+            <div class="news_grid">
+                <div class="news">
+                    <div>10</div>
+                    <div class="date">Jan</div>
+                    <div class="chat_icon"></div>
+                </div>
+
+                <div class="news_text">
+                    <a href="#">ALIQUAM NIBH</a>
+                    Proin pharetra luctus diam, any scelerisque eros convallisumsan.
+                    Maecenas vehicula egestas
+                </div>
+            </div>
+
+            <div class="news_grid">
+                <div class="news">
+                    <div>21</div>
+                    <div class="date">Jan</div>
+                    <div class="chat_icon"></div>
+                </div>
+
+                <div class="news_text">
+                    <a href="#">ETIAM DUI EROS</a>
+                    Any scelerisque eros vallisumsan.
+                    Maecenas vehicula egestas natis.
+                    Duis massa elit, auctor non
+                </div>
+            </div>
+
+            <div class="news_grid">
+                <div class="news">
+                    <div>15</div>
+                    <div class="date">feb</div>
+                    <div class="chat_icon"></div>
+                </div>
+
+                <div class="news_text">
+                    <a href="#">UAMNIBH EDETO</a>
+                    Ros convallisumsan.
+                    Maecenas vehicula egestas venenatis.
+                    Duis massa elit, auctor non
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="#" id="to_up_link"></a>
+
+    <footer>
+        <div class="copyright">
+            <div class="label">
+                Your Trip (c) 2014 |
+                <a href="#">
+                    Privacy Policy
+                </a>
+                | Website Template Designed by TemplateMonster.com
+            </div>
+
+            <div class="socials_networks">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google-plus"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ba8ad2d3a6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
